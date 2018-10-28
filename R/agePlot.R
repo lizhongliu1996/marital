@@ -12,8 +12,8 @@
 #' @export
 #'
 #' @examples
-#' agePlot("Miami-Dade County", "Never married", theSex = "Male")
-#' agePlot("Alachua County", "Divorced", theSex = "Female")
+#' agePlot("Miami-Dade", "Never married", theSex = "Male")
+#' agePlot("Alachua", "Divorced", theSex = "Female")
 #'
 #'
 agePlot <- function(thePlace, theGroup, theSex) {
@@ -78,7 +78,7 @@ agePlot <- function(thePlace, theGroup, theSex) {
 
   titles<-paste(thePlace, theSex, theGroup,sep=" - ")
 
-  ggplot(data=hehe, aes(y=estimate_num, x=range,fill=range)) +
+  ggplot(data=hehe,aes(y=hehe$estimate_num, x=hehe$range,fill=hehe$range)) +
     geom_bar(stat="identity")+
     scale_fill_manual(values = colors) +
     coord_flip()+
@@ -86,4 +86,3 @@ agePlot <- function(thePlace, theGroup, theSex) {
     guides(fill=FALSE)
 
 }
-

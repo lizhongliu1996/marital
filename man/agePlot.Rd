@@ -17,8 +17,8 @@ agePlot(thePlace, theGroup, theSex)
 agePlot Helper function that draws a bar chart when passed a sex and marriage categories vector
 }
 \examples{
-agePlot("Miami-Dade County", "Never married", theSex = "Male")
-agePlot("Alachua County", "Divorced", theSex = "Female")
+agePlot("Miami-Dade", "Never married", theSex = "Male")
+agePlot("Alachua", "Divorced", theSex = "Female")
 
 
 }
